@@ -1,6 +1,7 @@
 import unittest
 import task
 import math
+from datetime import date
 
 
 class TestCase(unittest.TestCase):
@@ -23,7 +24,12 @@ class TestCase(unittest.TestCase):
         expectedFirst,expectedLast = task.firstlast(list)
         self.assertEqual(1, expectedFirst)
         self.assertEqual(5, expectedLast)
-
+    
+    def testList(self):
+        date1 = date(2000, 1, 1)
+        date2 = date(2000, 2, 28)
+        expected = (date1-date2).days
+        self.assertEqual(expected, task.days(date1, date2))
 
 
 if __name__ == '__main__':
