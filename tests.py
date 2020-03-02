@@ -25,7 +25,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(1, expectedFirst)
         self.assertEqual(5, expectedLast)
     
-    def testList(self):
+    def testDays(self):
         date1 = date(2000, 1, 1)
         date2 = date(2000, 2, 28)
         expected = (date1-date2).days
